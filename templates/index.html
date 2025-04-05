@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DockForge - Shipping Yard Saga</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body class="h-screen w-screen overflow-hidden relative">
+
+
+  <!-- 🌄 Background Image anchored to bottom -->
+  <img src="/static/images/Background.png" alt="Shipping Yard Background"
+       class="absolute bottom-0 left-0 w-full h-full object-cover object-bottom z-0" />
+
+  <!-- 🌊 Top Header -->
+  <header class="flex items-center justify-between px-6 py-4 relative z-10">
+    <div class="flex items-center space-x-3">
+        <a href="/" class="flex items-center space-x-3">
+          <img src="../static/images/Logo1.0.png" alt="Logo" class="h-14 w-14 object-contain" />
+          <h1 class="text-white text-2xl font-bold tracking-widest px-0">DockForge</h1>
+        </a>
+    </div>
+    <nav>
+      <ul class="flex gap-6 text-white font-medium">
+        <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Levels</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Progress</a></li>
+        <li><a href="#" class="hover:text-yellow-300">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🚢 Title & CTA Section -->
+  <section class="flex flex-col items-center justify-start text-center text-white min-h-screen px-6 relative z-10">
+    <h1 class="text-5xl font-extrabold mb-4 tracking-wide" style="color: #ffffff;">CODE & CARGO</h1> 
+    <h2 class="text-4xl font-extrabold mb-4 tracking-wide" style="color: #2496ED;">THE SHIPPING YARD SAGA</h2>
+    <p class="text-xl mb-8 max-w-2xl">
+      Learn Docker the fun way - One command at a time!
+    </p>
+    <a href="#start" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg">
+      Start Your Journey
+    </a>
+  </section>
+
+</body>
+</html>
