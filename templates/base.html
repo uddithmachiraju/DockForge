@@ -1,0 +1,51 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DockForge - Shipping Yard Saga</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body class="h-screen w-screen overflow-hidden relative">
+
+  <!-- 🌄 Background -->
+  <img src="/static/images/Background.png" alt="Shipping Yard Background"
+       class="absolute bottom-0 left-0 w-full h-full object-cover object-bottom z-0" />
+
+  <!-- 🌊 Header -->
+  <header class="flex items-center justify-between px-6 py-4 relative z-10">
+    <div class="flex items-center space-x-3">
+        <a href="/" class="flex items-center space-x-3">
+          <img src="/static/images/Logo1.0.png" alt="Logo" class="h-14 w-14 object-contain" />
+          <h1 class="text-white text-2xl font-bold tracking-widest px-0">DockForge</h1>
+        </a>
+    </div>
+    <nav>
+      <ul class="flex gap-6 text-white font-medium">
+        {% if session.get('user_id') %}
+          <li><a href="/" class="hover:text-yellow-300">Home</a></li>
+          <li><a href="/levels" class="hover:text-yellow-300">Levels</a></li>
+          <li><a href="/progress" class="hover:text-yellow-300">Progress</a></li>
+          <li><a href="/logout" class="hover:text-yellow-300">Logout</a></li>
+        {% else %}
+          <li><a href="/about" class="hover:text-yellow-300">About</a></li>
+          <li><a href="/login" class="hover:text-yellow-300">Login</a></li>
+        {% endif %}
+      </ul>
+    </nav>    
+  </header>
+
+  <!-- 🔹 Dynamic Content Goes Here -->
+  <main class="relative z-10">
+    {% block content %}{% endblock %}
+  </main>
+
+</body>
+</html>
